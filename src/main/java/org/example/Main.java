@@ -145,7 +145,6 @@ public class Main {
             driver.findElement(By.id("opentab")).isDisplayed();
             Thread.sleep(2000);
         }
-        System.out.println("Hello World");
 
     }
 
