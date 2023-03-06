@@ -137,7 +137,7 @@ public class exampleOne {
         Thread.sleep(3000);
         select.selectByVisibleText("Option2");
         Thread.sleep(3000);
-        //select.selectByValue("option1"); ///Not Working?????????????
+        select.selectByValue("option1"); ///Not Working?????????????
         List<WebElement> e = select.getOptions();
         for (int i=0; i<e.size(); i++){
             Assert.assertEquals(e.get(i).getText(), expectedDropDown.get(i));
@@ -180,13 +180,13 @@ public class exampleOne {
                 String courses = driver.findElement(By.linkText("Courses")).getText();
                 driver.findElement(By.linkText("Courses")).isDisplayed();
                 Assert.assertEquals(courses, "Courses");
-                driver.quit();
+                //driver.quit();
             }
             //Above code is working but when I run below it shows error??????????????????????
-            /*driver.switchTo().window(mainWindow);
+            driver.switchTo().window(mainWindow);
             driver.findElement(By.id("opentab")).isDisplayed();
             Thread.sleep(3000);
-            driver.quit();*/
+            //driver.quit();
         }
     }
     @Test
